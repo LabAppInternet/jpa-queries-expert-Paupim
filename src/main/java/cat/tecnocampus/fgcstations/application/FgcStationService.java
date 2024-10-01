@@ -20,24 +20,24 @@ public class FgcStationService {
 
     public List<StationDTO> getStationsDTO() {
         //TODO 1: get all stations (see the returned type)
-        return null;
+        return stationRepository.findAllDTO();
     }
 
     public List<Station> getStationsDomain() {
         //TODO 2: get all stations (see you return a domain Station). Actually you don't need to leave this file
         // in order to complete this exercise
-        return null;
+        return stationRepository.findAll();
     }
 
     public Station getStation(String name) {
         // TODO 3: get a station by name (see the returned type). If the station does not exist, throw a StationDoesNotExistsException
         //  you won't need to write any sql (jpql) query
-        return null;
+        return stationRepository.findByName(name);
     }
 
     public StationDTO getStationDTO(String name) {
         // TODO 4: get a station by name (see the returned type). If the station does not exist, throw a StationDoesNotExistsException
-        return null;
+        return stationRepository.findDTObyName(name);
     }
 
     public List<StationTopFavoriteJourney> getStationsOrderedByFavoriteJourneysAsEitherOriginOrDestination() {
